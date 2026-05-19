@@ -10,7 +10,7 @@
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 :root{--navy:#1a2744;--gold:#c9a84c;--gold-light:#e8c96a;--cream:#faf8f3;--text:#2d3748}
-body{font-family:'Inter',sans-serif;color:var(--text);background:#fff}
+body{font-family:'Inter',sans-serif;color:var(--text);background:#fff;padding-top:40px}
 
 /* HERO */
 .hero{position:relative;height:100vh;min-height:580px;background:var(--navy);display:flex;align-items:center;justify-content:center;overflow:hidden}
@@ -85,9 +85,11 @@ nav.scrolled{background:var(--navy);box-shadow:0 2px 20px rgba(0,0,0,0.3)}
 .contact-value a{color:var(--gold);text-decoration:none}
 
 /* BANNER */
-.banner{background:linear-gradient(135deg,var(--navy),#2c3e6e);padding:80px 24px;text-align:center;color:#fff}
-.banner h2{font-family:'Cormorant Garamond',serif;font-size:clamp(1.6rem,3vw,2.6rem);font-weight:600;margin-bottom:16px}
-.banner p{color:rgba(255,255,255,0.7);margin-bottom:32px;font-size:16px}
+#buy-banner{position:fixed;top:0;left:0;width:100%;background:#000;color:#fff;z-index:9999;padding:10px 24px;display:flex;align-items:center;justify-content:space-between;gap:12px}
+#buy-banner p{font-size:14px;margin:0}
+#buy-banner a.stripe{background:#ff4d00;color:#fff;text-decoration:none;padding:8px 18px;border-radius:4px;font-size:13px;font-weight:500;white-space:nowrap;flex-shrink:0}
+@media(max-width:600px){#buy-banner .dt{display:none}}
+@media(min-width:601px){#buy-banner .mob{display:none}}
 
 /* FOOTER */
 footer{background:#111827;color:rgba(255,255,255,0.5);padding:32px 24px;text-align:center;font-size:13px}
@@ -123,7 +125,7 @@ footer a{color:rgba(255,255,255,0.4);text-decoration:none}
 </nav>
 
 <section class="hero">
-  <div class="hero-bg"><img src="https://maps.googleapis.com/maps/api/place/photo?maxwidth=1200&photoreference=Ab43m-tXt6MDOadl6AVcT27fqTK_8Pt-TEiRS6K_q0ywqm4enumWeuM_UvRV__l0cISdI90qUFkoBF5Shn6du07n3-4ZBHULzLHesFS4esteW_rm4mL6EeVCIhpF17TujQgT1wbBJj6pwriPhOVCfgZkvUY30hY8BVeE3ui2EZUwRo5CoKbp8Fw1lnDWuT2swJUcPIzTNbRmlRMStRuqKgD7LPMAZfgEnRvi-cSt5x3uYIZ5gN272XudJ7bUc7Q2824wvfXXRO69wsmO2iWTDpon20T1y2upZt1QYZaYWlIg6yU8TQ&key=AIzaSyCYXbAb5oATfgJRzDY7v7_wNhQ6F7PltAM" alt="Avv. Maria Elena Nitti" style="width:100%;height:100%;object-fit:cover;opacity:0.35"></div>
+  <div class="hero-bg"><img src="https://maps.googleapis.com/maps/api/place/photo?maxwidth=1200&photoreference=Ab43m-t7ILSOT7otYvN-fcubhaOx8wjJZCHXcIibiLQJxZzZG8uB3sfncojCvi3mLPrYf--p5oNngoErdA3toziF06lA7yALTyOxyJweeb6rBK870ADixXafCxLeJ2F0SZmWKwwkU0e356-qngjeE876I_zbqr8s6xktG97CxgGXjBh1FkG5sEWDxq7bJq43YRYHlT2kSLRDnwEAf4f7m9Z7X5h2ShPixPhSfLl8zKnk0C6IUTykFnmFugFFz-E-Hh9KNif2uY__h4tLeQ35SbtVIZ68UUAkeAf1YEZsP-dgCxrCqw&key=AIzaSyCYXbAb5oATfgJRzDY7v7_wNhQ6F7PltAM" alt="Avv. Maria Elena Nitti" style="width:100%;height:100%;object-fit:cover;opacity:0.35"></div>
   <div class="hero-overlay"></div>
   <div class="hero-content">
     <div class="hero-badge">Studio legale · Bologna</div>
@@ -150,7 +152,7 @@ footer a{color:rgba(255,255,255,0.4);text-decoration:none}
         </div>
       </div>
       <div class="about-img">
-        <img src="https://maps.googleapis.com/maps/api/place/photo?maxwidth=700&photoreference=Ab43m-uUXSFeZeB8LXNA7x1ynzzbd0Qz3chrXffTbwipXl0aY9-qFrtV_XfyFssAhEjQne3BpY6zn6ydUd8VkKy3fLrVONDZUBJP_sSXIBH40ieAJWB1pmNshHVF6QYC_KDIDYyNnAn5gxHuWmeaEJYcIacWprPjWBgLEUpUbE1wRxJBXK-zd8JQZ-cfpauvghIbJ0uMbgAwwNRknyW3JAFuocXleQG60D5vYBvpyDgGTk4sKt86VvDI1dJkddVycbxZY2WCkK1zVHV1ztaFsXBsKfe02dPOFYZVd8mkS389-_eqgA&key=AIzaSyCYXbAb5oATfgJRzDY7v7_wNhQ6F7PltAM" alt="Avv. Maria Elena Nitti">
+        <img src="https://maps.googleapis.com/maps/api/place/photo?maxwidth=700&photoreference=Ab43m-sZGmZIbzoZ8BftAa86p-1PVcnlp35Ehmz3s0UI8FyoaH0XLUJJoOIHy1Em9BvC21uM6szrvaMFLXjkJ1GMWeUG8YFgHuvu7_lqJ9IgKbq9pgczQOdQDZ4NjFx18TCBQSmATQ5IuVo3yRQcV3lHtR71pYZwJYCGUYlwkXO29MZV_Z1PJTzBF0YcL9e_I-nxl1cYtnMLAicAsGM9MOwWLNpUjIHYwd1kmsSB4lL0XehP9ORo99zrPnbvR-_GtWEBIF0j062imaFiCzpMKpw73scB2lslhHcxQ1bvGeoHnqYudw&key=AIzaSyCYXbAb5oATfgJRzDY7v7_wNhQ6F7PltAM" alt="Avv. Maria Elena Nitti">
       </div>
     </div>
   </div>
@@ -160,7 +162,7 @@ footer a{color:rgba(255,255,255,0.4);text-decoration:none}
   <div class="container">
     <h2 class="section-title">Servizi offerti</h2>
     <div class="services-grid"><div class="service-item"><div class="service-icon">⚖</div><span>Consulenza legale</span></div><div class="service-item"><div class="service-icon">⚖</div><span>Diritto civile</span></div><div class="service-item"><div class="service-icon">⚖</div><span>Diritto del lavoro</span></div><div class="service-item"><div class="service-icon">⚖</div><span>Diritto penale</span></div><div class="service-item"><div class="service-icon">⚖</div><span>Recupero crediti</span></div><div class="service-item"><div class="service-icon">⚖</div><span>Contrattualistica</span></div></div>
-    <div class="photo-grid"><div class="photo-item" style="background-image:url('https://maps.googleapis.com/maps/api/place/photo?maxwidth=600&photoreference=Ab43m-uUXSFeZeB8LXNA7x1ynzzbd0Qz3chrXffTbwipXl0aY9-qFrtV_XfyFssAhEjQne3BpY6zn6ydUd8VkKy3fLrVONDZUBJP_sSXIBH40ieAJWB1pmNshHVF6QYC_KDIDYyNnAn5gxHuWmeaEJYcIacWprPjWBgLEUpUbE1wRxJBXK-zd8JQZ-cfpauvghIbJ0uMbgAwwNRknyW3JAFuocXleQG60D5vYBvpyDgGTk4sKt86VvDI1dJkddVycbxZY2WCkK1zVHV1ztaFsXBsKfe02dPOFYZVd8mkS389-_eqgA&key=AIzaSyCYXbAb5oATfgJRzDY7v7_wNhQ6F7PltAM')"></div><div class="photo-item" style="background-image:url('https://maps.googleapis.com/maps/api/place/photo?maxwidth=600&photoreference=Ab43m-tMrYJW5aGLGJigu6WkodGezbBlegQuC6P5ItHDxchJOT6YqkbFou0-BKTKXDnXF2CMuaPyLZWHXnSVOiZ5IfoyqxQefAXqEP3QXYyb0dv3tosf136nlU7DXvmbYdXeJ0Kdwhi3Q6Ze6Ek2EOG-iz1EDOydR7xWQ2Qb_d8E9EF3iqf09l6kFvji9jx9oMrIW307WMnNvdUZtZ5O2r73c4N_Lsf4sFwzYNG6rWxEjAKs85br4L0BesDHWrIShQSyKHNgCsJ5rfufheQloc2FuP2epn_pOA-LZ2g-qYYN7lvR8A&key=AIzaSyCYXbAb5oATfgJRzDY7v7_wNhQ6F7PltAM')"></div><div class="photo-item" style="background-image:url('https://maps.googleapis.com/maps/api/place/photo?maxwidth=600&photoreference=Ab43m-s2GLVpY--dO2CaxHDtrUxrSi9zC7eR7AZSHCyzY35fsROoz-XoaCNsMpWJQ2cQ-vyhYcayA_0_u8-SzJsdqG1ml_L-WoTiPuHO5YLTmHsTl1S7yhSXcOZh4whljxDM2rgxx6aNFDjcqZp-hToBcnssGfTz2--mjcFq0Uk09nNhr6f3k9cnOiSd_QPDQv4sG8I4fwllSmt2IRbzagSOr_Xmo2DO2mrZ7yfvNEaMMy7ow_MC49M5X_Kbvw865EAl0hlq7poeThKdzpxXSTT2X-oYE0NlD8lkqlmGdLVfmDANIA&key=AIzaSyCYXbAb5oATfgJRzDY7v7_wNhQ6F7PltAM')"></div><div class="photo-item" style="background-image:url('https://maps.googleapis.com/maps/api/place/photo?maxwidth=600&photoreference=Ab43m-t4hI7Q9lctEr7HnNL5Ml0VHqN0MWHDekb_URcNXn342U2vQbe0NJRqpOhN4RDyLhSHKRFrrvJU92oDsd3qucaVLkF2wtwsxDFIHGsYYhMOMIAz4WHNI22MsBaZI2jlRiPPD4vhRHre26YB_SNbwR8WsqJ-04VZCzRx5-PAKLsPqtbgQeVSzFcO8jnr954dYEzhub_GLQkrLdypSbrfrAmqL43AyvQPaW9shczohLWNSNaaJRnJV_FjAUR6U1e3dqlNB6gtwWb0S3tr1rgOuGFRDStpDl8xVFCvqVN_3qV1og&key=AIzaSyCYXbAb5oATfgJRzDY7v7_wNhQ6F7PltAM')"></div></div>
+    <div class="photo-grid"><div class="photo-item" style="background-image:url('https://maps.googleapis.com/maps/api/place/photo?maxwidth=600&photoreference=Ab43m-sZGmZIbzoZ8BftAa86p-1PVcnlp35Ehmz3s0UI8FyoaH0XLUJJoOIHy1Em9BvC21uM6szrvaMFLXjkJ1GMWeUG8YFgHuvu7_lqJ9IgKbq9pgczQOdQDZ4NjFx18TCBQSmATQ5IuVo3yRQcV3lHtR71pYZwJYCGUYlwkXO29MZV_Z1PJTzBF0YcL9e_I-nxl1cYtnMLAicAsGM9MOwWLNpUjIHYwd1kmsSB4lL0XehP9ORo99zrPnbvR-_GtWEBIF0j062imaFiCzpMKpw73scB2lslhHcxQ1bvGeoHnqYudw&key=AIzaSyCYXbAb5oATfgJRzDY7v7_wNhQ6F7PltAM')"></div><div class="photo-item" style="background-image:url('https://maps.googleapis.com/maps/api/place/photo?maxwidth=600&photoreference=Ab43m-uxUQQyIsXIlmKOSDcbwETXfQFwmmLzdD4pLMiY2W1kV0xer4amLR32PziEifihU4yKIeQzkGfOCyD_Uh-zFoHTe6t1X4BJ6kDJPioJ-EHIYDQpOdkqnfQStyYdnzeBFqVKg6ZziD54uY4oTv08_I4wYEHf6pLirW-hNdBFJb9EMOdMG1DIgN7VWZQneH3r-HF711R2_s5ADCXd82kUHa9kqB_0xitZY4d0mSTnuxH3gPXT8gq2mwSgHDh05FQuK7FxJXcjSRlrewiXr_0I2YYjgNQAqu4EYQCli4tFKbYGqw&key=AIzaSyCYXbAb5oATfgJRzDY7v7_wNhQ6F7PltAM')"></div><div class="photo-item" style="background-image:url('https://maps.googleapis.com/maps/api/place/photo?maxwidth=600&photoreference=Ab43m-toAPEnxKFmNZFsxhjnrRDK17BMRXqkjZObBePDOVc6hVE41fC4CdJK3VSDeYtpfzbdemPLNKkOJwfjggJ2ZPRj_V1HvN5iDCtZeOUKc8Z69siGJMJwCtHwfD5t08o5zRwLpwTdEezmDLTJ2Scl00oTOUXEQN96x4LHm7UHcvsv2smNHGyNvrP1fZsaYbM4Sq-yfoxezdWQBTnslJLI8y-0deA2Broy31_1KRr9LYiPVXqReXB8sMGBp0zHFZDYVcRrDtnpjm8Jm1sInZyoAQGsaRr2kV8rFSPx8wj_tqRpvQ&key=AIzaSyCYXbAb5oATfgJRzDY7v7_wNhQ6F7PltAM')"></div><div class="photo-item" style="background-image:url('https://maps.googleapis.com/maps/api/place/photo?maxwidth=600&photoreference=Ab43m-sege6DcFGsp1JDrDg45BtFmQHgxOPpBkpC-tQGY7DccVNdIt5anMqy5nTGNyTNCtjq3LHIzG85kpcj5nIlMNLYH8i3AvgykgOYOGvT1pq1qkiEIxEQqyZ_S1-pF3qF83RYORCm5hH6JTQ9zi5F0snNPQX5lPvBLuiRwk9q6uhG9OWBgLsEnh69W3Sq18G2EDlc6tZqE1utjlYvEMuFYRmb0FEcBTMw4yng5_k58SgSG1yBV8iQJCQaPzibVvpSynv7GelDjdXHmJvw7AVgoDQ8lf6VEHwhZlWE_quD3ejpzA&key=AIzaSyCYXbAb5oATfgJRzDY7v7_wNhQ6F7PltAM')"></div></div>
   </div>
 </section>
 
@@ -291,16 +293,19 @@ E poi come si suol dire... non c'è due... senza tre. A ...</p>
       <div class="contact-card"><div class="contact-icon">📞</div><div class="contact-label">Telefono</div><div class="contact-value"><a href="tel:+39 348 742 6900">+39 348 742 6900</a></div></div>
       <div class="contact-card"><div class="contact-icon">📍</div><div class="contact-label">Indirizzo</div><div class="contact-value">Via Marsala,  31, 40126 Bologna</div></div>
       <div class="contact-card"><div class="contact-icon">🏛</div><div class="contact-label">Specializzazione</div><div class="contact-value">Studio legale</div></div>
+      <div class="contact-card" style="text-align:left">
+  <div class="contact-icon" style="text-align:center">🕐</div>
+  <div class="contact-label" style="text-align:center;margin-bottom:12px">Orari</div>
+  <table style="font-size:13px;width:100%"><tr><td style="padding:5px 16px 5px 0;">Lunedì</td><td style="color:rgba(255,255,255,0.8);">09–13 / 15:30–19:30</td></tr><tr><td style="padding:5px 16px 5px 0;font-weight:700;color:var(--gold)">Martedì</td><td style="color:#fff;font-weight:700;color:var(--gold)">09–13 / 15:30–19:30</td></tr><tr><td style="padding:5px 16px 5px 0;">Mercoledì</td><td style="color:rgba(255,255,255,0.8);">09–13 / 15:30–19:30</td></tr><tr><td style="padding:5px 16px 5px 0;">Giovedì</td><td style="color:rgba(255,255,255,0.8);">09–13 / 15:30–19:30</td></tr><tr><td style="padding:5px 16px 5px 0;">Venerdì</td><td style="color:rgba(255,255,255,0.8);">09–13 / 15:30–19:30</td></tr><tr><td style="padding:5px 16px 5px 0;">Sabato</td><td style="color:#e53e3e;">Chiuso</td></tr><tr><td style="padding:5px 16px 5px 0;">Domenica</td><td style="color:#e53e3e;">Chiuso</td></tr></table>
+</div>
     </div>
   </div>
 </section>
 
-<div class="banner">
-  <div class="container">
-    <h2>Vuoi un sito come questo per il tuo studio?</h2>
-    <p>Simplo crea siti web professionali in 24 ore per studi legali, notai e professionisti.</p>
-    <a href="https://buy.stripe.com/8x25kC7mo39M0bN1Mv1B601" class="btn-primary">Scopri Simplo →</a>
-  </div>
+<div id="buy-banner">
+  <p class="dt">Ti piace questo sito? Il tuo potrebbe essere identico — online in 5 giorni per €99</p>
+  <p class="mob">Vuoi un sito così? €99</p>
+  <a href="https://buy.stripe.com/8x25kC7mo39M0bN1Mv1B601" target="_blank" class="stripe">Inizia ora →</a>
 </div>
 
 <footer>
